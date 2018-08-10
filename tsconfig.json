@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "declarationMap": true,
+    "allowJs": true
+  },
+  "exclude": ["node_modules", "lib"]
+}

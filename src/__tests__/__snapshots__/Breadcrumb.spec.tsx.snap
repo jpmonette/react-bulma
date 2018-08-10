@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb should generate a breadcrumb 1`] = `
+<nav
+  aria-label="breadcrumbs"
+  className="breadcrumb custom-class has-arrow-seperator is-centered is-large"
+>
+  <ul>
+    <li
+      className="is-active"
+    >
+      <a
+        aria-current="page"
+        href="/home"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="is-active"
+    >
+      <a
+        aria-current="page"
+      >
+        About
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Breadcrumb should generate an empty breadcrumb 1`] = `
+<nav
+  aria-label="breadcrumbs"
+  className="breadcrumb"
+/>
+`;
+
+exports[`Breadcrumb.Item should generate an item 1`] = `
+<li
+  className="is-active"
+>
+  <a
+    aria-current="page"
+    href="/home"
+  >
+    Home
+  </a>
+</li>
+`;
