@@ -7,17 +7,16 @@ exports[`Breadcrumb should generate a breadcrumb 1`] = `
 >
   <ul>
     <li
-      className="is-active"
+      className=""
     >
       <a
-        aria-current="page"
         href="/home"
       >
         Home
       </a>
     </li>
     <li
-      className="is-active"
+      className="about is-active"
     >
       <a
         aria-current="page"
@@ -32,7 +31,7 @@ exports[`Breadcrumb should generate a breadcrumb 1`] = `
 exports[`Breadcrumb should generate an empty breadcrumb 1`] = `
 <nav
   aria-label="breadcrumbs"
-  className="breadcrumb"
+  className="breadcrumb has-arrow-seperator has-bullet-seperator has-dot-seperator has-succeeds-seperator is-centered is-large is-medium is-right is-small"
 />
 `;
 
