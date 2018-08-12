@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Level should generate a level section 1`] = `
+<nav
+  aria-label="breadcrumbs"
+  className="level is-mobile"
+>
+  <ul>
+    <div
+      className="sample-class level-left"
+    >
+      <div
+        className="level-item has-text-centered"
+      >
+        <p
+          className="heading"
+        >
+          Tweets
+        </p>
+        <p
+          className="title"
+        >
+          3,456
+        </p>
+      </div>
+      <div
+        className="level-item has-text-centered"
+      >
+        <p
+          className="heading"
+        >
+          Following
+        </p>
+        <p
+          className="title"
+        >
+          123
+        </p>
+      </div>
+    </div>
+    <div
+      className="sample-class level-right"
+    >
+      <div
+        className="level-item has-text-centered"
+      >
+        <p
+          className="heading"
+        >
+          Tweets
+        </p>
+        <p
+          className="title"
+        >
+          3,456
+        </p>
+      </div>
+      <div
+        className="level-item has-text-centered"
+      >
+        <p
+          className="heading"
+        >
+          Following
+        </p>
+        <p
+          className="title"
+        >
+          123
+        </p>
+      </div>
+    </div>
+  </ul>
+</nav>
+`;
