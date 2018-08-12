@@ -11,7 +11,7 @@
 
 **💪🏼 Strongly Typed**: Developed using TypeScript / type-safe.
 
-**🔒 Tested**: Tests & snapshot for each syndication format to avoid regressions.
+**🔒 Tested**: Tests & snapshot for each components to avoid regressions.
 
 # Getting Started
 
