@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 interface Props {
   className?: string;
-  children?: Array<Element | JSX.Element>;
+  children?: React.ReactNode;
   hasArrowSeperator?: boolean;
   hasBulletSeperator?: boolean;
   hasDotSeperator?: boolean;
@@ -63,7 +63,6 @@ interface ItemProps {
   // TODO: add icons
 }
 
-// TODO: add aria-current
 class BreadcrumbItem extends React.Component<ItemProps> {
   render() {
     const { children, href, isActive, className, ...props } = this.props;
