@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "allowUnreachableCode": false,
+    "baseUrl": ".",
+    "declaration": true,
+    "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react",
-    "declarationMap": true,
-    "allowJs": true
+    "outDir": "./lib",
+    "strict": true,
+    "target": "es5"
   },
   "exclude": ["node_modules", "lib"]
 }
