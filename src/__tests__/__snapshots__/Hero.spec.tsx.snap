@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero should generate a hero 1`] = `
+<section
+  className="test-class hero is-primary is-info is-success is-warning is-danger is-light is-dark is-bold is-medium is-large is-fullheight"
+>
+  <div
+    className="hero-body"
+  >
+    Sample Website Title
+  </div>
+</section>
+`;
