@@ -1,24 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
 
-interface Props {
-  className?: string;
-  children?: React.ReactNode;
-  isMobile?: boolean;
-}
-
-class Level extends React.Component<Props> {
-  render() {
-    const { children, className, isMobile, ...props } = this.props;
-
-    return (
-      <nav {...props} className={classNames("level", isMobile && "is-mobile", className)} aria-label="breadcrumbs">
-        {children && <ul>{children}</ul>}
-      </nav>
-    );
-  }
-}
-
 class LevelLeft extends React.Component<ItemProps> {
   render() {
     const { children, className, ...props } = this.props;
@@ -58,4 +40,26 @@ class LevelItem extends React.Component<ItemProps> {
   }
 }
 
-export { Level, LevelItem, LevelLeft, LevelRight };
+interface Props {
+  className?: string;
+  children?: React.ReactNode;
+  isMobile?: boolean;
+}
+
+class Level extends React.Component<Props> {
+  static Left = LevelLeft;
+  static Right = LevelRight;
+  static Item = LevelItem;
+
+  render() {
+    const { children, className, isMobile, ...props } = this.props;
+
+    return (
+      <nav {...props} className={classNames("level", isMobile && "is-mobile", className)} aria-label="breadcrumbs">
+        {children && <ul>{children}</ul>}
+      </nav>
+    );
+  }
+}
+
+export { Level };

@@ -1,6 +1,26 @@
 import * as React from "react";
 import classNames from "classnames";
 
+interface ItemProps {
+  className?: string;
+  href?: string;
+  isActive?: boolean;
+  // TODO: add icons
+}
+
+class BreadcrumbItem extends React.Component<ItemProps> {
+  render() {
+    const { children, href, isActive, className, ...props } = this.props;
+    return (
+      <li {...props} className={classNames(className, isActive && "is-active")}>
+        <a href={href} aria-current={isActive ? "page" : undefined}>
+          {children}
+        </a>
+      </li>
+    );
+  }
+}
+
 interface Props {
   className?: string;
   children?: React.ReactNode;
@@ -16,6 +36,7 @@ interface Props {
 }
 
 class Breadcrumb extends React.Component<Props> {
+  static Item = BreadcrumbItem;
   render() {
     const {
       children,
@@ -46,7 +67,7 @@ class Breadcrumb extends React.Component<Props> {
           isLarge && "is-large",
           isMedium && "is-medium",
           isRight && "is-right",
-          isSmall && "is-small"
+          isSmall && "is-small",
         )}
         aria-label="breadcrumbs"
       >
@@ -56,24 +77,4 @@ class Breadcrumb extends React.Component<Props> {
   }
 }
 
-interface ItemProps {
-  className?: string;
-  href?: string;
-  isActive?: boolean;
-  // TODO: add icons
-}
-
-class BreadcrumbItem extends React.Component<ItemProps> {
-  render() {
-    const { children, href, isActive, className, ...props } = this.props;
-    return (
-      <li {...props} className={classNames(className, isActive && "is-active")}>
-        <a href={href} aria-current={isActive ? "page" : undefined}>
-          {children}
-        </a>
-      </li>
-    );
-  }
-}
-
-export { Breadcrumb, BreadcrumbItem };
+export { Breadcrumb };

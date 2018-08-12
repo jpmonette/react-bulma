@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Breadcrumb, BreadcrumbItem as Item } from "../Breadcrumb";
 import { create } from "react-test-renderer";
+
+import { Breadcrumb } from "../";
 
 describe("Breadcrumb", () => {
   it("should generate an empty breadcrumb", () => {
@@ -11,18 +12,18 @@ describe("Breadcrumb", () => {
 
   it("should generate a breadcrumb", () => {
     const children = [
-      <Item key={0} href={"/home"} isActive={true}>
+      <Breadcrumb.Item key={0} href={"/home"} isActive={true}>
         Home
-      </Item>,
-      <Item key={1} isActive={true}>
+      </Breadcrumb.Item>,
+      <Breadcrumb.Item key={1} isActive={true}>
         About
-      </Item>
+      </Breadcrumb.Item>,
     ];
 
     const tree = create(
       <Breadcrumb hasArrowSeperator={true} className={"custom-class"} isCentered isLarge>
         {children}
-      </Breadcrumb>
+      </Breadcrumb>,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -32,9 +33,9 @@ describe("Breadcrumb", () => {
 describe("Breadcrumb.Item", () => {
   it("should generate an item", () => {
     const tree = create(
-      <Item key={0} href={"/home"} isActive={true}>
+      <Breadcrumb.Item key={0} href={"/home"} isActive={true}>
         Home
-      </Item>
+      </Breadcrumb.Item>,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

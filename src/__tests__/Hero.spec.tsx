@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Hero, HeroBody } from "../Hero";
 import { create } from "react-test-renderer";
+
+import { Hero } from "..";
 
 describe("Hero", () => {
   it("should generate a hero", () => {
@@ -19,8 +20,8 @@ describe("Hero", () => {
         isFullHeight
         className={"test-class"}
       >
-        <HeroBody>Sample Website Title</HeroBody>
-      </Hero>
+        <Hero.Body>Sample Website Title</Hero.Body>
+      </Hero>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

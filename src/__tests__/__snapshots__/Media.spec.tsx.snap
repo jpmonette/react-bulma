@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Level should generate a level section 1`] = `
+<article
+  className="media"
+>
+  <div
+    className="sample-class media-left"
+  >
+    <div
+      className="media-content"
+    >
+      Media Content
+    </div>
+  </div>
+  <div
+    className="sample-class media-right"
+  >
+    <div
+      className="media-content"
+    >
+      Media Content
+    </div>
+    <div
+      className="media-content"
+    >
+      Media Content
+    </div>
+  </div>
+</article>
+`;

@@ -21,7 +21,7 @@ class Container extends React.Component<Props> {
           className,
           isFluid && "is-fluid",
           isWidescreen && "is-widescreen",
-          isFullHD && "is-fullhd"
+          isFullHD && "is-fullhd",
         )}
       >
         {children}
